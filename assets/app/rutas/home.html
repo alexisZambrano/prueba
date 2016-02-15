@@ -1,0 +1,40 @@
+<h1>Lista de Usuarios</h1>
+<div ng-repeat="variableUsuario in usuarios">
+    <div class="col-sm-4" ng-init="variableUsuario.visible=false">
+        <h1>{{$index+1}} {{variableUsuario.apellido}} {{variableUsuario.nombre}} {{variableUsuario.ciudad}}</h1>
+          <img ng-src="{{usuarios[$index].foto}}" align="right" height="90" width="90"/>
+        <button ng-click="variableUsuario.visible=!variableUsuario.visible" class="btn btn-default">Editar</button>
+        <br>
+        <form class="animated bounceIn" ng-show="variableUsuario.visible" ng-submit="editarUsuario(variableUsuario, $index)">
+            <div class="form-group">
+            <label for="idnombre">Nombre</label>
+            <input ng-model="usuarios[$index].nombre" type="text" class="form-control" id="idnombre" placeholder="Actualiza tu Nombre" >
+          </div>
+            <div class="form-group">
+            <label for="idapellido">Apellido</label>
+            <input ng-model="usuarios[$index].apellido" type="text" class="form-control" id="idapellido" placeholder="Actualiza tu Apellido">
+          </div>
+          <div class="form-group">
+          <label for="idedad">edad</label>
+          <input ng-model="usuarios[$index].edad" type="integer" class="form-control" id="idedad" placeholder="Actualiza tu edad">
+        </div>
+        <div class="form-group">
+        <label for="idcorreo">correo</label>
+        <input ng-model="usuarios[$index].correo" type="text" class="form-control" id="idcorreo" placeholder="Actualiza tu correo">
+        </div>
+        <div class="form-group">
+        <label for="idciudad">ciudad</label>
+        <input ng-model="usuarios[$index].ciudad" type="text" class="form-control" id="idciudad" placeholder="Actualiza tu ciudad">
+        </div>
+        <div class="form-group">
+        <label for="idfoto">foto</label>
+        <input ng-model="usuarios[$index].foto" type="text" class="form-control" id="idfoto" placeholder="Actualiza tu foto">
+        </div>
+          <button class="btn btn-success" type="submit">Guardar Cambios</button>
+        </form>
+        <br>
+        <a href="#/pastel/{{variableUsuario.id}}" class="btn btn-success">Añadir pasteles - {{variableUsuario.id}}</a>
+    </div>
+
+
+</div>

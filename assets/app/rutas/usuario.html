@@ -1,0 +1,34 @@
+
+<div class="row">
+    <div class="col-sm-4">
+        <h2>Agregar nuevo Usuario</h2>
+        <form ng-submit="agregarNuevoUsuario()">
+
+            <div class="form-group">
+                <label for="idnombre">Nombre</label>
+                <input ng-model="nuevoUsuario.nombre" type="text" class="form-control" id="idnombre" placeholder="Ingresa un Nombre" >
+            </div>
+            <div class="form-group">
+                <label for="idapellido">Apellido</label>
+                <input ng-model="nuevoUsuario.apellido" type="text" class="form-control" id="idapellido" placeholder="Ingresa un Apellido" >
+            </div>
+            <div class="form-group">
+                <label for="idedad">edad</label>
+                <input ng-model="nuevoUsuario.edad" type="text" class="form-control" id="idedad" placeholder="Ingresa tu edad" >
+            </div>
+            <div class="form-group">
+                <label for="idcorreo">correo</label>
+                <input ng-model="nuevoUsuario.correo" type="text" class="form-control" id="idcorreo" placeholder="Ingresa tu correo" >
+            </div>
+            <div class="form-group">
+                <label for="idciudad">ciudad</label>
+                <input ng-model="nuevoUsuario.ciudad" type="text" class="form-control" id="idciudad" placeholder="Ingresa tu ciudad" >
+            </div>
+            <div class="form-group">
+                <label for="idfoto">foto</label>
+                <input ng-model="nuevoUsuario.foto" type="text" class="form-control" id="idfoto" placeholder="Ingresa tu foto" >
+            </div>
+            <button class="btn btn-success">Agregar Usuario</button>
+        </form>
+    </div>
+</div>
